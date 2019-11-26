@@ -67,6 +67,17 @@
     font-size: 15pt;
 }
 
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+}
+.plot1 {
+    flex: 0 0 auto;
+}
+
+
 @media screen and (max-width: 500px) {
     .menu-items a {
         font-size: 6pt;

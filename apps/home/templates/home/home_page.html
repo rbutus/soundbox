@@ -16,7 +16,18 @@ Delete the line below if you're just getting started and want to remove the welc
 {% block content %}
 
     {% include 'home/home_page_content.html' %}
-    {% include 'home/plot.html' %}
+
+    <div class="scrolling-wrapper">
+        <div class="plot1" style="padding-left:170px">{% include 'home/plot.html' %}</div>
+        <div class="plot1">{% include 'home/plot2.html' %}</div>
+        <div class="plot1" style="padding-right:170px">{% include 'home/plot3.html' %}</div>
+    </div>
+
+
+
+
+
+
     {% include 'home/contact.html' %}
 
 {% endblock content %}

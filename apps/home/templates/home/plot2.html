@@ -10,8 +10,8 @@
     }
 
 
-    .bar {
-  fill: steelblue;
+    .bar2 {
+  fill: #7854b4;
 }
 
 .axis text {
@@ -33,7 +33,7 @@
 </style>
 
 <div class="flex-chart">
-    <svg class="chart1"></svg>
+    <svg class="chart2"></svg>
 </div>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -73,7 +73,7 @@
         .scale(y)
         .orient("left");
 
-    var chart = d3.select(".chart1")
+    var chart = d3.select(".chart2")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -108,11 +108,11 @@
             .style("text-anchor", "end")
             .text("Population (millions)");
 
-        chart.selectAll(".bar")
+        chart.selectAll(".bar2")
             .data(data)
             .enter()
             .append("rect")
-            .attr("class", "bar")
+            .attr("class", "bar2")
             .attr("x", function(d) { return x(d.name); })
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
