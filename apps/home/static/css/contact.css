@@ -1,0 +1,34 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202326;
+    padding-top: 30pt;
+    padding-bottom: 30pt;
+}
+
+.contact {
+    font: 20pt "Arial";
+    margin-bottom: 15pt;
+    color: #9197a3;
+    letter-spacing: 1pt;
+}
+
+.info {
+    font: 13pt "Arial";
+    color: #9197a3;
+    letter-spacing: 1pt;
+    text-decoration: none;
+}
+
+#info {
+    color: #9197a3;
+    text-decoration: none;
+}
+
+#goToFooter a:hover {
+    color: white;
+}
+

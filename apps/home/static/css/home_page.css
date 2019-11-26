@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.template-homepage {
+    background-color: black;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #202326;
+    padding-top: 2pt;
+    padding-bottom: 2pt;
+    padding-left: 4pt;
+    overflow: hidden;
+}
+
+.menu-items a {
+    font-family: "Avenir", sans-serif;
+    font-size: 9pt;
+    letter-spacing: 1pt;
+    color: lightgrey;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar a:link {
+    text-decoration: none;
+    display: block;
+}
+
+#navbar a:hover {
+    color: white;
+}
+
+.logo-image {
+    width: 4vw;
+    margin-top: 5%;
+}
+
+.flex-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80pt;
+}
+
+.logo-text {
+    width: 50vw;
+}
+
+.coming {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Avenir", sans-serif;
+    margin-top: 6%;
+    color: white;
+    font-size: 15pt;
+}
+
+@media screen and (max-width: 500px) {
+    .menu-items a {
+        font-size: 6pt;
+    }
+
+    .flex-logo {
+        padding-top: 45pt;
+    }
+}
+
