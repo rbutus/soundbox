@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff036d82-5ac2-4822-a20e-b240d39410bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soundbox/settings/dev.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/soundbox/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/soundbox/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/soundbox/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/soundbox/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/home_page.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,6 +90,7 @@
       <workItem from="1573350948068" duration="2656000" />
       <workItem from="1573360881627" duration="3082000" />
       <workItem from="1574719079977" duration="4018000" />
+      <workItem from="1574744488290" duration="500000" />
     </task>
     <servers />
   </component>
