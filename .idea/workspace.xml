@@ -42,19 +42,19 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/home/static" />
+      <recent name="$PROJECT_DIR$/apps/home/static/css" />
+      <recent name="$PROJECT_DIR$/apps/home/templates/home" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/apps" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/home/static" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/home/static/images" />
       <recent name="$PROJECT_DIR$/home/media" />
       <recent name="$PROJECT_DIR$/soundbox/static/js" />
-      <recent name="$PROJECT_DIR$/soundbox/static/css" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/home/templates/home" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/apps" />
-      <recent name="$PROJECT_DIR$/soundbox" />
-      <recent name="$PROJECT_DIR$/apps/home" />
     </key>
   </component>
   <component name="RunDashboard">
