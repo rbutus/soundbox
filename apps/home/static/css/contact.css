@@ -4,14 +4,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #202326;
+    background-color: black;
     padding-top: 30pt;
     padding-bottom: 30pt;
 }
 
 .contact {
     font: 20pt "Arial";
-    margin-bottom: 15pt;
+    margin-bottom: 10pt;
     color: #9197a3;
     letter-spacing: 1pt;
 }

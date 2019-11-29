@@ -79,7 +79,7 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("{% static "data/population.csv" %}", type, function(error, data) {
+    d3.csv("{% static "data/rate.csv" %}", type, function(error, data) {
         x.domain(data.map(function(d) { return d.name; }));
         y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
@@ -106,7 +106,7 @@
             .attr("dy", "-10em")
             .attr("x", label_adjust)
             .style("text-anchor", "end")
-            .text("Population (millions)");
+            .text("Population Growth Rate (%)");
 
         chart.selectAll(".bar3")
             .data(data)
@@ -117,6 +117,14 @@
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
             .attr("width", x.rangeBand());
+
+        chart.append("g")
+            .attr("class", "title1")
+            .append("text")
+            .attr("x", width/2 )
+            .attr("y", 0 )
+            .style("text-anchor", "middle")
+            .text("Countries with the highest annual population growth rates");
     });
         function type(d) {
         d.value = +d.value; // coerce to number

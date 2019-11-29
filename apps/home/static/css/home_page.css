@@ -15,7 +15,7 @@
     padding-top: 2pt;
     padding-bottom: 2pt;
     padding-left: 4pt;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .menu-items a {
@@ -29,15 +29,18 @@
   position: fixed;
   top: 0;
   width: 100%;
+    z-index: 5;
 }
 
 #navbar a:link {
     text-decoration: none;
     display: block;
+
 }
 
 #navbar a:hover {
     color: white;
+
 }
 
 .logo-image {
@@ -58,23 +61,35 @@
 
 .coming {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     flex-direction: column;
     font-family: "Avenir", sans-serif;
-    margin-top: 6%;
+    margin-top: 3%;
     color: white;
-    font-size: 15pt;
+    font-size: 11pt;
+    padding-left: 10px;
 }
 
 .scrolling-wrapper {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-
-}
-.plot1 {
+    background-color: #222222;
+    padding: 20px;
     flex: 0 0 auto;
+}
+
+.plot {
+    background-color: #3c3c3c;
+    padding: 20px;
+}
+
+.chart-padding {
+    padding: 10px;
+}
+
+#chart-hover div:hover {
+    background-color: #333333;
 }
 
 
@@ -85,6 +100,10 @@
 
     .flex-logo {
         padding-top: 45pt;
+    }
+
+    .coming {
+        font-size: 10pt;
     }
 }
 

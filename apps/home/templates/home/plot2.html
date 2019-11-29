@@ -17,7 +17,6 @@
 .axis text {
     font: 10px sans-serif;
     fill: white;
-
 }
 
 .axis path,
@@ -29,6 +28,11 @@
 .x.axis path {
   display: none;
 }
+
+    .title1 text {
+        font: 15px sans-serif;
+        fill: white;
+    }
 
 </style>
 
@@ -79,7 +83,7 @@
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("{% static "data/population.csv" %}", type, function(error, data) {
+    d3.csv("{% static "data/density.csv" %}", type, function(error, data) {
         x.domain(data.map(function(d) { return d.name; }));
         y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
@@ -91,14 +95,15 @@
             .attr("transform", "rotate(60)")
             .attr("dx", "1.1em")
             .attr("dy", ".2em")
-            .style("text-anchor", "start")
+            .style("text-anchor", "start");
+
 
         chart.append("g")
-            .attr("class", "y axis")
+            .attr("class", "axis")
             .call(yAxis);
 
         chart.append("g")
-            .attr("class", "y axis")
+            .attr("class", "axis")
             .call(yAxis)
             .append("text")
             .attr("transform", "rotate(-90)")
@@ -106,7 +111,7 @@
             .attr("dy", "-10em")
             .attr("x", label_adjust)
             .style("text-anchor", "end")
-            .text("Population (millions)");
+            .text("Population Density (per square km)");
 
         chart.selectAll(".bar2")
             .data(data)
@@ -117,7 +122,16 @@
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })
             .attr("width", x.rangeBand());
+
+        chart.append("g")
+            .attr("class", "title1")
+            .append("text")
+            .attr("x", width/2 )
+            .attr("y", 0 )
+            .style("text-anchor", "middle")
+            .text("Regions with the highest population densities");
     });
+
         function type(d) {
         d.value = +d.value; // coerce to number
         return d;

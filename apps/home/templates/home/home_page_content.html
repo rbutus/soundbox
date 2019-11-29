@@ -1,15 +1,26 @@
 {% load static %}
+{% load wagtailcore_tags %}
 
 <div class="menu-items sticky" id="navbar">
     <a href="http://soundboxsolutions.com">
         <img class="logo-image" src="{% static "images/oxso_logo3.png" %}" alt="Logo">
     </a>
-    <a href="#home">HOME</a>
-    <a href="#services">SERVICES</a>
+
+    <ul class="menu-skills" id="dropdown">
+        <li style="list-style-type: none">
+            <a href="#skills">SKILLS</a>
+            <ul style="list-style-type: none; z-index: 999">
+                <li class="dropdown-items"><a href="#datavis">Data Visualizations</a></li>
+                <li class="dropdown-items"><a href="#dataanalysis">Data Analysis</a></li>
+                <li class="dropdown-items"><a href="#salesforce">Salesforce Development</a></li>
+                <li class="dropdown-items"><a href="#webdev">Web Development</a></li>
+            </ul>
+        </li>
+    </ul>
     <a href="#about">ABOUT</a>
+    <a href="#blog">BLOG</a>
     <a href="#goToFooter">CONTACT</a>
     <a></a>
-
 </div>
 
 <div class="flex-logo">
@@ -18,9 +29,34 @@
     </div>
 </div>
 
-<div class="coming">
-    <div>Populations of the World</div>
+{#<div style="padding-bottom: 10px; background-color: black">#}
+{#    {% for block in page.content %}#}
+{#        {% include_block block %}#}
+{#    {% endfor %}#}
+{#</div>#}
+
+<div id="datavis" style="padding: 1pt"></div>
+<div class="coming"><h1>Data Visualization</h1></div>
+<div class="scrolling-wrapper" >
+    <div id="chart-hover">{% include 'home/plot.html' %}</div>
+    <div class="chart-padding"></div>
+    <div id="chart-hover">{% include 'home/plot2.html' %}</div>
+    <div class="chart-padding"></div>
+    <div id="chart-hover">{% include 'home/plot3.html' %}</div>
 </div>
+
+<div id="dataanalysis" style="padding: 10pt"></div>
+<div class="coming"><h1>Data Analyses</h1></div>
+
+<div id="salesforce" style="padding: 10pt"></div>
+<div class="coming"><h1>Salesforce Development</h1></div>
+
+<div id="webdev" style="padding: 10pt"></div>
+<div class="coming"><h1>Web Development</h1></div>
+
+
+
+{% include 'home/contact.html' %}
 
 
 
