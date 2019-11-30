@@ -6,17 +6,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20pt;
+        padding-bottom: 20pt;
     }
 
 
-    .bar {
-  fill: steelblue;
+    .bar3 {
+  fill: #b4b34f;
 }
 
 .axis text {
     font: 10px sans-serif;
-    fill: blue;
+    fill: white;
 
 }
 
@@ -33,7 +33,7 @@
 </style>
 
 <div class="flex-chart">
-    <svg class="chart1"></svg>
+    <svg class="chart3"></svg>
 </div>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -51,7 +51,7 @@
     } else {
         width_adjust = 700;
         height_adjust = 300;
-        label_adjust = -60;
+        label_adjust = -30;
     }
 
     // Margin adjustments
@@ -73,13 +73,13 @@
         .scale(y)
         .orient("left");
 
-    var chart = d3.select(".chart1")
+    var chart = d3.select(".chart3")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.csv("{% static "data/population.csv" %}", type, function(error, data) {
+    d3.csv("{% static "data/rate.csv" %}", type, function(error, data) {
         x.domain(data.map(function(d) { return d.name; }));
         y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
@@ -106,13 +106,13 @@
             .attr("dy", "-10em")
             .attr("x", label_adjust)
             .style("text-anchor", "end")
-            .text("Population (millions)");
+            .text("Population Growth Rate (%)");
 
-        chart.selectAll(".bar")
+        chart.selectAll(".bar3")
             .data(data)
             .enter()
             .append("rect")
-            .attr("class", "bar")
+            .attr("class", "bar3")
             .attr("x", function(d) { return x(d.name); })
             .attr("y", function(d) { return y(d.value); })
             .attr("height", function(d) { return height - y(d.value); })

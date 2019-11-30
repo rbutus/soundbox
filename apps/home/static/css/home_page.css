@@ -11,16 +11,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #202326;
+    background-color: #0f0f0f;
     padding-top: 2pt;
     padding-bottom: 2pt;
     padding-left: 4pt;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .menu-items a {
     font-family: "Avenir", sans-serif;
-    font-size: 9pt;
+    font-size: 10pt;
     letter-spacing: 1pt;
     color: lightgrey;
 }
@@ -29,19 +29,22 @@
   position: fixed;
   top: 0;
   width: 100%;
+    z-index: 5;
 }
 
 #navbar a:link {
     text-decoration: none;
     display: block;
+
 }
 
 #navbar a:hover {
     color: white;
+
 }
 
 .logo-image {
-    width: 4vw;
+    width: 3vw;
     margin-top: 5%;
 }
 
@@ -58,14 +61,37 @@
 
 .coming {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
     flex-direction: column;
     font-family: "Avenir", sans-serif;
-    margin-top: 6%;
+    margin-top: 3%;
     color: white;
-    font-size: 15pt;
+    font-size: 11pt;
+    padding-left: 10px;
+
 }
+
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    background-color: #222222;
+    padding: 10px;
+    flex: 0 0 auto;
+}
+
+.plot {
+    background-color: #3c3c3c;
+    /*padding: 30px;*/
+}
+
+.chart-padding {
+    padding: 10px;
+}
+
+#chart-hover div:hover {
+    background-color: #333333;
+}
+
 
 @media screen and (max-width: 500px) {
     .menu-items a {
@@ -75,5 +101,18 @@
     .flex-logo {
         padding-top: 45pt;
     }
+
+    .coming {
+        font-size: 8pt;
+        padding-top: 10pt;
+    }
+
+    .logo-image {
+    width: 7vw;
+}
+
+    /*.axis text {*/
+    /*    font: 7pt sans-serif;*/
+    /*}*/
 }
 
