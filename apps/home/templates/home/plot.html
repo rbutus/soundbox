@@ -16,7 +16,7 @@
 
 .axis text {
     font: 10px sans-serif;
-    fill: blue;
+    fill: white;
 
 }
 
@@ -30,10 +30,15 @@
   display: none;
 }
 
+        .title text {
+        font: 15px sans-serif;
+        fill: white;
+    }
+
 </style>
 
 <div class="flex-chart">
-    <svg class="chart1"></svg>
+    <svg class="chart"></svg>
 </div>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
@@ -73,7 +78,7 @@
         .scale(y)
         .orient("left");
 
-    var chart = d3.select(".chart1")
+    var chart = d3.select(".chart")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -119,7 +124,7 @@
             .attr("width", x.rangeBand());
 
         chart.append("g")
-            .attr("class", "title1")
+            .attr("class", "title")
             .append("text")
             .attr("x", width/2 )
             .attr("y", -20 )

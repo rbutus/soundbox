@@ -1,19 +1,19 @@
 {% load static %}
 {% load wagtailcore_tags %}
 
-<div class="menu-items sticky" id="navbar">
+<nav class="menu-items" id="navbar">
     <a href="http://soundboxsolutions.com">
         <img class="logo-image" src="{% static "images/oxso_logo3.png" %}" alt="Logo">
     </a>
 
-    <ul class="menu-skills" id="dropdown">
+    <ul class="menu-skills">
         <li style="list-style-type: none">
             <a href="#skills">SKILLS</a>
-            <ul style="list-style-type: none; z-index: 999" id="dropdown-items">
-                <li class="dropdown-items"><a href="#datavis">Data Visualization</a></li>
-                <li class="dropdown-items"><a href="#dataanalysis">Data Analysis</a></li>
-                <li class="dropdown-items"><a href="#webdev">Web Development</a></li>
-                <li class="dropdown-items"><a href="#salesforce">Salesforce Development</a></li>
+            <ul style="list-style-type: none">
+                <li><a href="#datavis">Data Visualization</a></li>
+                <li><a href="#dataanalysis">Data Analysis</a></li>
+                <li><a href="#webdev">Web Development</a></li>
+                <li><a href="#salesforce">Salesforce Development</a></li>
             </ul>
         </li>
     </ul>
@@ -21,13 +21,13 @@
     <a href="#blog">BLOG</a>
     <a href="#goToFooter">CONTACT</a>
     <a></a>
-</div>
+</nav>
+
 
 <div class="flex-logo">
-    <div>
-        <img class="logo-text" src="{% static "images/company_name.png" %}" alt="Soundbox Solutions">
-    </div>
+    <img class="logo-text" src="{% static "images/company_name.png" %}" alt="Soundbox Solutions">
 </div>
+
 
 {#<div style="padding-bottom: 10px; background-color: black">#}
 {#    {% for block in page.content %}#}
@@ -38,12 +38,14 @@
 <div id="datavis" style="padding: 4pt"></div>
 <div class="coming"><h1>Data Visualization</h1></div>
 
-<div class="scrolling-wrapper" >
+<div class="scrolling-wrapper">
+    <div class="chart-padding"></div>
     <div id="chart-hover">{% include 'home/plot.html' %}</div>
     <div class="chart-padding"></div>
-    <div id="chart-hover">{% include 'home/plot2.html' %}</div>
-    <div class="chart-padding"></div>
-    <div id="chart-hover">{% include 'home/plot3.html' %}</div>
+{#    <div id="chart-hover">{% include 'home/plot2.html' %}</div>#}
+{#    <div class="chart-padding"></div>#}
+{#    <div id="chart-hover">{% include 'home/plot3.html' %}</div>#}
+{#    <div class="chart-padding"></div>#}
 </div>
 
 <div id="dataanalysis" style="padding: 10pt"></div>
@@ -55,10 +57,9 @@
 <div id="salesforce" style="padding: 10pt"></div>
 <div class="coming"><h1>Salesforce Development</h1></div>
 
-
-
-
 {% include 'home/contact.html' %}
 
-
+<script>
+    (function(l){var i,s={touchend:function(){}};for(i in s)l.addEventListener(i,s)})(document); // sticky hover fix in iOS
+</script>
 
