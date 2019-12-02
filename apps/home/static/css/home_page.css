@@ -42,21 +42,24 @@
     /*flex-wrap: nowrap;*/
     overflow-x: auto;
     background-color: #222222;
-    padding: 10px;
+    padding: 5px;
     /*flex: 0 0 auto;*/
 }
 
 .plot {
-    background-color: #3c3c3c;
-    /*padding: 30px;*/
+    /*background-color: #3c3c3c;*/
 }
 
 .chart-padding {
     padding: 10px;
 }
 
-#chart-hover div:hover {
+#chart-hover :hover {
     background-color: #333333;
+}
+
+#chart-hover {
+    padding: 5pt;
 }
 
 

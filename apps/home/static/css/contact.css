@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0f0f0f;
+    background-color: #333333;
     padding-top: 20pt;
     padding-bottom: 20pt;
 }
@@ -12,19 +12,19 @@
 .contact {
     font: 15pt "Arial";
     margin-bottom: 10pt;
-    color: #9d9d9d;
+    color: lightgrey;
     letter-spacing: 1pt;
 }
 
 .info {
     font: 13pt "Arial";
-    color: #9d9d9d;
+    color: grey;
     letter-spacing: 1pt;
     text-decoration: none;
 }
 
 #info {
-    color: #9197a3;
+    color: grey;
     text-decoration: none;
 }
 

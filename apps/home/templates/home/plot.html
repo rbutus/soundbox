@@ -1,4 +1,7 @@
 {% load static %}
+{% static "data/population.csv" as data_population %}
+{% static "data/density.csv" as data_density %}
+{% static "data/rate.csv" as data_rate %}
 
 <style>
 
@@ -6,12 +9,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20pt;
+        padding: 5pt;
     }
 
 
-    .bar {
-  fill: steelblue;
+    .bar1 {
+        fill: steelblue;
+}
+
+    .bar2 {
+        fill: mediumpurple;
+}
+
+    .bar3 {
+        fill: seagreen;
 }
 
 .axis text {
@@ -37,103 +48,126 @@
 
 </style>
 
-<div class="flex-chart">
-    <svg class="chart"></svg>
+<div class="scrolling-wrapper">
+    <div class="flex-chart">
+        <div></div>
+        <div id="chart-hover">
+            <svg class="chart chart-padding"></svg>
+        </div>
+        <div></div>
+        <div id="chart-hover">
+            <svg class="chart2 chart-padding"></svg>
+        </div>
+        <div></div>
+        <div id="chart-hover">
+            <svg class="chart3 chart-padding"></svg>
+        </div>
+        <div class="chart-padding"></div>
+    </div>
 </div>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 
-    // Adjust values depending on screen width
-    screenWidth = window.innerWidth;
-    var width_adjust;
-    var height_adjust;
-    var label_adjust;
-    if (screenWidth < 600) {
-        width_adjust = 250;
-        height_adjust = 250;
-        label_adjust = -40;
-    } else {
-        width_adjust = 700;
-        height_adjust = 300;
-        label_adjust = -60;
+    function draw(selector, data_file, bar_class) {
+
+        // Adjust values depending on screen width
+        screenWidth = window.innerWidth;
+        let width_adjust;
+        let height_adjust;
+        let label_adjust;
+        if (screenWidth < 600) {
+            width_adjust = 250;
+            height_adjust = 250;
+            label_adjust = -40;
+        } else {
+            width_adjust = 700;
+            height_adjust = 300;
+            label_adjust = -60;
+        }
+
+        // Margin adjustments
+        let margin = {top: 35, right: 0, bottom: 60, left: 60},
+            width = width_adjust - margin.left - margin.right,
+            height = height_adjust - margin.top - margin.bottom;
+
+        let x = d3.scale.ordinal()
+            .rangeRoundBands([0, width], .1);
+
+        let y = d3.scale.linear()
+            .range([height, 0]);
+
+        let xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+
+        let yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        let chart = d3.select("." + String(selector))
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        let yo = "hello";
+
+        d3.csv(data_file, type, function(error, data) {
+            x.domain(data.map(function(d) { return d.name; }));
+            y.domain([0, d3.max(data, function(d) { return d.value; })]);
+
+            chart.append("g")
+                .attr("class", "x axis")
+                .attr("transform", "translate(0," + height + ")")
+                .call(xAxis)
+                .selectAll("text")
+                .attr("transform", "rotate(60)")
+                .attr("dx", "1.1em")
+                .attr("dy", ".2em")
+                .style("text-anchor", "start")
+
+            chart.append("g")
+                .attr("class", "y axis")
+                .call(yAxis);
+
+            chart.append("g")
+                .attr("class", "y axis")
+                .call(yAxis)
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 50)
+                .attr("dy", "-10em")
+                .attr("x", label_adjust)
+                .style("text-anchor", "end")
+                .text("Population (millions)");
+
+            chart.selectAll("." + bar_class)
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("class", bar_class)
+                .attr("x", function(d) { return x(d.name); })
+                .attr("y", function(d) { return y(d.value); })
+                .attr("height", function(d) { return height - y(d.value); })
+                .attr("width", x.rangeBand());
+
+            chart.append("g")
+                .attr("class", "title")
+                .append("text")
+                .attr("x", width/2 )
+                .attr("y", -20 )
+                .style("text-anchor", "middle")
+                .text("Bar chart using d3.js");
+        });
+            function type(d) {
+            d.value = +d.value; // coerce to number
+            return d;
+        }
     }
 
-    // Margin adjustments
-    var margin = {top: 35, right: 0, bottom: 60, left: 60},
-        width = width_adjust - margin.left - margin.right,
-        height = height_adjust - margin.top - margin.bottom;
-
-    var x = d3.scale.ordinal()
-        .rangeRoundBands([0, width], .1);
-
-    var y = d3.scale.linear()
-        .range([height, 0]);
-
-    var xAxis = d3.svg.axis()
-        .scale(x)
-        .orient("bottom")
-
-    var yAxis = d3.svg.axis()
-        .scale(y)
-        .orient("left");
-
-    var chart = d3.select(".chart")
-        .attr("width", width + margin.left + margin.right)
-        .attr("height", height + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    d3.csv("{% static "data/population.csv" %}", type, function(error, data) {
-        x.domain(data.map(function(d) { return d.name; }));
-        y.domain([0, d3.max(data, function(d) { return d.value; })]);
-
-        chart.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis)
-            .selectAll("text")
-            .attr("transform", "rotate(60)")
-            .attr("dx", "1.1em")
-            .attr("dy", ".2em")
-            .style("text-anchor", "start")
-
-        chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-
-        chart.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 50)
-            .attr("dy", "-10em")
-            .attr("x", label_adjust)
-            .style("text-anchor", "end")
-            .text("Population (millions)");
-
-        chart.selectAll(".bar")
-            .data(data)
-            .enter()
-            .append("rect")
-            .attr("class", "bar")
-            .attr("x", function(d) { return x(d.name); })
-            .attr("y", function(d) { return y(d.value); })
-            .attr("height", function(d) { return height - y(d.value); })
-            .attr("width", x.rangeBand());
-
-        chart.append("g")
-            .attr("class", "title")
-            .append("text")
-            .attr("x", width/2 )
-            .attr("y", -20 )
-            .style("text-anchor", "middle")
-            .text("Bar chart using d3.js");
-    });
-        function type(d) {
-        d.value = +d.value; // coerce to number
-        return d;
-    }
+    draw("chart", "{{ data_population }}", "bar1");
+    draw("chart2", "{{ data_density }}", "bar2");
+    draw("chart3", "{{ data_rate }}", "bar3");
 
 </script>
