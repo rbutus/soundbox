@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ff036d82-5ac2-4822-a20e-b240d39410bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/static/css/contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/contact.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/static/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/home_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/plot.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +93,8 @@
       <workItem from="1574744488290" duration="42485000" />
       <workItem from="1575174885061" duration="8774000" />
       <workItem from="1575229139828" duration="2589000" />
-      <workItem from="1575244113830" duration="5838000" />
+      <workItem from="1575244113830" duration="6122000" />
+      <workItem from="1575263862840" duration="141000" />
     </task>
     <servers />
   </component>

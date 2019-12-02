@@ -33,7 +33,7 @@
 
 .menu-skills li > ul {
     position: absolute;
-    background: #0f0f0f;
+    background: #333333;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     -o-transition: all .5s ease;
