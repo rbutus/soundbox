@@ -28,11 +28,11 @@
 
 .logo-padding {
     background: black;
-    padding: 20pt;
+    padding: 20px;
     width: 100%;
 }
 
-.background-image {
+.background-img {
     height: 100%;
     width: 100%;
     background-size: cover;
@@ -40,7 +40,7 @@
     background-position: center;
     z-index: -1;
     position: fixed;
-    opacity: 25%;
+    opacity: 40%;
 }
 
 

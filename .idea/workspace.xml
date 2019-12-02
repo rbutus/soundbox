@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff036d82-5ac2-4822-a20e-b240d39410bb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7015.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7328.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7330.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/static/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/home_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" afterDir="false" />
     </list>
@@ -101,7 +97,7 @@
       <workItem from="1575244113830" duration="6122000" />
       <workItem from="1575263862840" duration="141000" />
       <workItem from="1575264027784" duration="269000" />
-      <workItem from="1575316196599" duration="5549000" />
+      <workItem from="1575316196599" duration="7969000" />
     </task>
     <servers />
   </component>
