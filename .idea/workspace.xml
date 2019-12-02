@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff036d82-5ac2-4822-a20e-b240d39410bb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7015.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7328.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/home/static/images/IMG_7330.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/drop-down.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/static/css/home_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/static/css/home_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/home/templates/home/home_page_content.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,19 +44,19 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/home/static/images" />
+      <recent name="$PROJECT_DIR$/apps/streams/templates/streams" />
+      <recent name="$PROJECT_DIR$/apps/home/static" />
+      <recent name="$PROJECT_DIR$/apps/home/static/css" />
+      <recent name="$PROJECT_DIR$/apps/home/templates/home" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/home/templates/home" />
       <recent name="$PROJECT_DIR$/apps/home/static" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/apps/home/static/images" />
       <recent name="$PROJECT_DIR$/home/media" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/streams/templates/streams" />
-      <recent name="$PROJECT_DIR$/apps/home/static" />
-      <recent name="$PROJECT_DIR$/apps/home/static/css" />
-      <recent name="$PROJECT_DIR$/apps/home/templates/home" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -95,6 +100,8 @@
       <workItem from="1575229139828" duration="2589000" />
       <workItem from="1575244113830" duration="6122000" />
       <workItem from="1575263862840" duration="141000" />
+      <workItem from="1575264027784" duration="269000" />
+      <workItem from="1575316196599" duration="5549000" />
     </task>
     <servers />
   </component>

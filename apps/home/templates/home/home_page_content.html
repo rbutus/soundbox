@@ -23,39 +23,31 @@
     <a></a>
 </nav>
 
+<div class="background-image" style="background-image: url('{% static 'images/IMG_7330.JPG' %}')"></div>
 
 <div class="flex-logo">
-    <img class="logo-text" src="{% static "images/company_name.png" %}" alt="Soundbox Solutions">
+    <div class="logo-padding">
+        <img class="logo-text" src="{% static "images/company_name.png" %}" alt="Soundbox Solutions">
+    </div>
 </div>
 
+<div style="padding-top: 50%"></div>
+<div class="skills-categories">
 
-{#<div style="padding-bottom: 10px; background-color: black">#}
-{#    {% for block in page.content %}#}
-{#        {% include_block block %}#}
-{#    {% endfor %}#}
-{#</div>#}
-
-<div id="datavis" style="padding: 4pt"></div>
-<div class="coming"><h1>Data Visualization</h1></div>
-
-{#<div class="scrolling-wrapper">#}
-{#    <div class="chart-padding"></div>#}
+    <div id="datavis" style="padding: 4pt"></div>
+    <div class="coming"><h1>Data Visualization</h1></div>
     <div>{% include 'home/plot.html' %}</div>
-{#    <div class="chart-padding"></div>#}
-{#    <div id="chart-hover">{% include 'home/plot2.html' %}</div>#}
-{#    <div class="chart-padding"></div>#}
-{#    <div id="chart-hover">{% include 'home/plot3.html' %}</div>#}
-{#    <div class="chart-padding"></div>#}
-{#</div>#}
 
-<div id="dataanalysis" style="padding: 10pt"></div>
-<div class="coming"><h1>Data Analysis</h1></div>
+    <div id="dataanalysis" style="padding: 10pt"></div>
+    <div class="coming"><h1>Data Analysis</h1></div>
 
-<div id="webdev" style="padding: 10pt"></div>
-<div class="coming"><h1>Web Development</h1></div>
+    <div id="webdev" style="padding: 10pt"></div>
+    <div class="coming"><h1>Web Development</h1></div>
 
-<div id="salesforce" style="padding: 10pt"></div>
-<div class="coming"><h1>Salesforce Development</h1></div>
+    <div id="salesforce" style="padding: 10pt"></div>
+    <div class="coming"><h1>Salesforce Development</h1></div>
+</div>
+<div style="padding-top: 10%"></div>
 
 {% include 'home/contact.html' %}
 
